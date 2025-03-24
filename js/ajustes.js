@@ -1,9 +1,9 @@
-const boton = document.getElementsByClassName('checkout__tab');
-
-console.log(boton[0]);
-
 // 30 descuento
 document.addEventListener("DOMContentLoaded", function(event) {
+
+const boton = document.getElementsByClassName('checkout__tab');
+console.log(boton[0]);
+  
 var price = document.getElementsByClassName("product-vip__price-value");
 var p = price[0].innerText;
 var splitPrice = p.split('$');
