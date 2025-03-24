@@ -45,8 +45,7 @@ let lis = document.querySelector('.block-grill-images__grid-item--full').getElem
       //ramdom      
       document.querySelector('.block-grill-images__image').src = 
       getRandomImage(img)['src'];}});});
-</script>
-<script>
+//
 window.addEventListener("load", (event) => {
 const button = document.querySelector(".product-vip__show-payment-offers-link");
 button.addEventListener("click", (event) => {
