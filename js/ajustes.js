@@ -44,8 +44,11 @@ let lis = document.querySelector('.block-grill-images__grid-item--full').getElem
   if (element.className == 'block-grill-images__image') {  
       //ramdom      
       document.querySelector('.block-grill-images__image').src = 
-      getRandomImage(img)['src'];}});});
-//
+      getRandomImage(img)['src'];}});
+
+});
+
+// formas pago
 window.addEventListener("load", (event) => {
 const button = document.querySelector(".product-vip__show-payment-offers-link");
 button.addEventListener("click", (event) => {
