@@ -1,4 +1,4 @@
-
+// 30 descuento
 document.addEventListener("DOMContentLoaded", function(event) {
 var price = document.getElementsByClassName("product-vip__price-value");
 var p = price[0].innerText;
@@ -81,3 +81,22 @@ var precioNumero = Number(splitPrice[1]);
 const number = parseInt(splitPrice[1].replace(/\./g, '').replace(',', '.'), 10);
 prices[key].innerText = "$" + new Intl.NumberFormat("de-DE").format(number * 1.3, 2);
 } }});});
+
+// destaca personalizados y papeleria
+window.addEventListener("load", (event) => {
+  // PC
+  let lis = document.querySelector('.header-menu__desktop-list').getElementsByTagName('a');
+  [].forEach.call(lis, (element, index) => {
+    //console.log(element.innerText.trim());
+    if (element.innerText.trim() == 'PERSONALIZADOS') {
+       document.getElementsByClassName("desktop-list__link")[index].target = "_self";
+       //element.style.color = '#ffffff';
+           element.style.backgroundColor = '#5FA6CF'; 
+    } 
+    if (element.innerText.trim() == 'PAPELERÍA') {
+       document.getElementsByClassName("desktop-list__link")[index].target = "_self";
+       //element.style.color = '#ffffff';
+           element.style.backgroundColor = '#BBE06D';  
+    } 
+  });
+});
