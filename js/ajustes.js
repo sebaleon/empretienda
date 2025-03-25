@@ -58,7 +58,7 @@ const items = document.querySelectorAll('.promotions__method-wrapper .promotions
 [...items].forEach(item => {
 //console.log(item.innerText);
    if (item.innerText == 'Acordamos el medio de pago al finalizar la compra') {
-         item.innerText = '- Finalice su compra y póngase en contacto por WhatsApp para enviarle el link de pago de MERCADOPAGO. \n\n ACLARACIÓN \n- Las compras con tarjeta de crédito se realizan a través de MERCADOPAGO.\n - Las promociones en cuotas las estipula MERCADOPAGO y es ajeno a PURCUÁ.\n - Por favor, antes de realizar la compra chequee el límite de su tarjeta y lea las condiciones de MERCADOPAGO.';
+         item.innerText = '- Al finalizar la compra, te enviaremos el link de pago de MERCADOPAGO. \n\n ACLARACIÓN \n- Las compras con tarjeta de crédito se realizan a través de MERCADOPAGO.\n - Las promociones en cuotas las estipula MERCADOPAGO y es ajeno a PURCUÁ.\n - Por favor, antes de realizar la compra chequee el límite de su tarjeta y lea las condiciones de MERCADOPAGO.';
    }});
 //
 const formasPago = document.querySelectorAll('li .border-radius');
