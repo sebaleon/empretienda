@@ -40,69 +40,54 @@ window.addEventListener("load", (event) => {
 //////////////////////// filtros
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Contenedor lateral
-    const filterContainer = document.querySelector(".products-feed__filter");
+    // Esperar a que TODOS los productos terminen de cargar
+    setTimeout(() => {
 
-    if (!filterContainer) return;
+        // BOTONES DE FILTRO
+        const filtros = document.querySelectorAll("[data-filtro]");
 
-    // Crear div de filtros
-    const fandomDiv = document.createElement("div");
-    fandomDiv.classList.add("fandom-filters");
+        // PRODUCTOS
+        const productos = document.querySelectorAll(".js-item-product");
 
-    fandomDiv.innerHTML = `
-        <button data-filter="all">Todos</button>
-        <button data-filter="dragon ball">Dragon Ball</button>
-        <button data-filter="naruto">Naruto</button>
-        <button data-filter="pokemon">Pokémon</button>
-        <button data-filter="sonic">Sonic</button>
-    `;
+        filtros.forEach(filtro => {
 
-    // Insertar debajo del título
-    const title = filterContainer.querySelector(".products-feed__filter-title");
+            filtro.addEventListener("click", function () {
 
-    title.insertAdjacentElement("afterend", fandomDiv);
+                const categoria = this.dataset.filtro.toLowerCase();
 
-    // Productos
-    const products = document.querySelectorAll(".products-feed__product");
+                productos.forEach(producto => {
 
-    // Eventos de filtros
-    const buttons = fandomDiv.querySelectorAll("button");
+                    // Texto completo del producto
+                    const textoProducto = producto.textContent.toLowerCase();
 
-    buttons.forEach(button => {
+                    // Mostrar todos
+                    if (categoria === "todos") {
 
-        button.addEventListener("click", function () {
+                        producto.style.display = "";
 
-            const filter = this.dataset.filter.toLowerCase();
+                    }
 
-            buttons.forEach(btn => btn.classList.remove("active"));
-            this.classList.add("active");
+                    // Mostrar solo coincidencias
+                    else if (textoProducto.includes(categoria)) {
 
-            products.forEach(product => {
+                        producto.style.display = "";
 
-                const title = product
-                    .querySelector(".products-feed__product-name")
-                    .innerText
-                    .toLowerCase();
+                    }
 
-                if (filter === "all") {
+                    // Ocultar resto
+                    else {
 
-                    product.style.display = "block";
+                        producto.style.display = "none";
 
-                } else if (title.includes(filter)) {
+                    }
 
-                    product.style.display = "block";
-
-                } else {
-
-                    product.style.display = "none";
-
-                }
+                });
 
             });
 
         });
 
-    });
+    }, 6000); // tiempo suficiente para que carguen todos
 
 });
 
