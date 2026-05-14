@@ -35,3 +35,74 @@ window.addEventListener("load", (event) => {
     } 
   });
 });
+
+
+//////////////////////// filtros
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Contenedor lateral
+    const filterContainer = document.querySelector(".products-feed__filter");
+
+    if (!filterContainer) return;
+
+    // Crear div de filtros
+    const fandomDiv = document.createElement("div");
+    fandomDiv.classList.add("fandom-filters");
+
+    fandomDiv.innerHTML = `
+        <button data-filter="all">Todos</button>
+        <button data-filter="dragon ball">Dragon Ball</button>
+        <button data-filter="naruto">Naruto</button>
+        <button data-filter="pokemon">Pokémon</button>
+        <button data-filter="sonic">Sonic</button>
+    `;
+
+    // Insertar debajo del título
+    const title = filterContainer.querySelector(".products-feed__filter-title");
+
+    title.insertAdjacentElement("afterend", fandomDiv);
+
+    // Productos
+    const products = document.querySelectorAll(".products-feed__product");
+
+    // Eventos de filtros
+    const buttons = fandomDiv.querySelectorAll("button");
+
+    buttons.forEach(button => {
+
+        button.addEventListener("click", function () {
+
+            const filter = this.dataset.filter.toLowerCase();
+
+            buttons.forEach(btn => btn.classList.remove("active"));
+            this.classList.add("active");
+
+            products.forEach(product => {
+
+                const title = product
+                    .querySelector(".products-feed__product-name")
+                    .innerText
+                    .toLowerCase();
+
+                if (filter === "all") {
+
+                    product.style.display = "block";
+
+                } else if (title.includes(filter)) {
+
+                    product.style.display = "block";
+
+                } else {
+
+                    product.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+    });
+
+});
+
