@@ -148,3 +148,19 @@ const resultado = partes.slice(0, 2).join("/");
    } 
 });
 
+// ELIMINAR FILTROS
+document.addEventListener("DOMContentLoaded", function () {
+
+    const items = document.querySelectorAll("li");
+
+    items.forEach(item => {
+
+        if (item.textContent.includes("FILTRO ANIME")) {
+
+            item.remove();
+
+        }
+
+    });
+
+});
