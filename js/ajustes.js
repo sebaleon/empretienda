@@ -97,9 +97,10 @@ document.addEventListener("DOMContentLoaded", function () {
     contenedor.insertAdjacentHTML(
         "afterbegin",
         `
+        <label>Filtrar por: </label>
           <select name="select-anime">
-            <option value="" selected>Seleccionar Anime</option>
-            <option value="dragonball" selected>Dragon Ball</option>
+            <option value="">Seleccionar Anime</option>
+            <option value="dragonball">Dragon Ball</option>
             <option value="onepiece">One Piece</option>
             <option value="bleach">Bleach</option>
           </select>
