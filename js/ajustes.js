@@ -36,3 +36,114 @@ window.addEventListener("load", (event) => {
   });
 });
 
+///////////////////////
+// ocultar-sin-stock.js
+(() => {
+
+  const PRODUCT_SELECTOR = '.products-feed__product';
+  const OUT_STOCK_SELECTOR = '.products-feed__product-out-stock';
+
+  function hideOutOfStockProducts() {
+
+    const products = document.querySelectorAll(PRODUCT_SELECTOR);
+
+    products.forEach(product => {
+
+      const outOfStock = product.querySelector(OUT_STOCK_SELECTOR);
+
+      if (outOfStock) {
+        product.style.display = 'none';
+      }
+
+    });
+
+  }
+
+  function init() {
+
+    hideOutOfStockProducts();
+
+    // Detecta productos cargados dinámicamente
+    const observer = new MutationObserver(() => {
+      hideOutOfStockProducts();
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+})();
+
+// filtros
+document.addEventListener("DOMContentLoaded", function () {
+
+    const textoURL = window.location.pathname.substring(1);
+
+    const contenedor = document.querySelector(".category-feed_content");
+
+    if (!contenedor) return;
+
+    if (textoURL === "figuras-y-coleccionables/anime") {
+
+
+
+    contenedor.insertAdjacentHTML(
+        "afterbegin",
+        `
+        <div class="filtro-contenedor">
+            Filtrar por: 
+                   <a href="https://www.purcua.com.ar/filtro-tazas/anime/dragon-ball" class="mi-boton">Dragon Ball</a> 
+                   <a href="https://www.purcua.com.ar/filtro-tazas/anime/onepiece" class="mi-boton">One Piece</a>                     
+                   <a href="https://www.purcua.com.ar/filtro-tazas/anime/naruto" class="mi-boton">Naruto</a> 
+                   <a href="https://www.purcua.com.ar/filtro-tazas/anime/jujutsu" class="mi-boton">Jujutsu Kaisen</a>
+                   <a href="https://www.purcua.com.ar/filtro-tazas/anime/bleach" class="mi-boton">Bleach</a> 
+                   <a href="https://www.purcua.com.ar/filtro-tazas/anime/sailor" class="mi-boton">Sailor Moon</a>
+                   <a href="https://www.purcua.com.ar/filtro-tazas/anime/demon" class="mi-boton">Demon Slayer</a>
+                   <a href="https://www.purcua.com.ar/filtro-tazas/anime/pokemon" class="mi-boton">Pokémon</a>
+                   <a href="https://www.purcua.com.ar/filtro-tazas/anime/mha" class="mi-boton">My Hero Academia</a>
+        </div>
+        `);
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    
+const partes = window.location.pathname.split("/").filter(Boolean);
+// Tomar solo las primeras 2 partes
+const resultado = partes.slice(0, 2).join("/");
+
+    if (resultado === "filtro-tazas/anime") {
+
+    // Buscar el UL
+    const breadcrumb = document.querySelector(".category-feed__breadcrumb");
+
+    if (!breadcrumb) return;
+
+    // Eliminar todos los LI viejos
+    breadcrumb.querySelectorAll(".breadcrumb__item").forEach(item => {
+        item.remove();
+    });
+
+    // Agregar nuevo LI con enlace
+    breadcrumb.insertAdjacentHTML(
+        "beforeend",
+        `
+        <li class="breadcrumb__item">
+            <a href="https://www.purcua.com.ar/figuras-y-coleccionables/anime">
+                < VOLVER
+            </a>
+        </li>
+        `
+    );
+   } 
+});
+
