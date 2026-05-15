@@ -116,11 +116,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // boton <volver
-document.addEventListener("DOMContentLoaded", function () {
-    
-const partes = window.location.pathname.split("/").filter(Boolean);
-// Tomar solo las primeras 2 partes
-const resultado = partes.slice(0, 2).join("/");
+document.addEventListener("DOMContentLoaded", function () {   
+
+// parseo url
+const resultado = window.location.pathname.split("/")[1];
 
     if (resultado === "filtro-anime") {
 
@@ -149,4 +148,23 @@ const resultado = partes.slice(0, 2).join("/");
 });
 
 // ELIMINAR FILTROS
+document.addEventListener("DOMContentLoaded", function () {
 
+    const enlaces = document.querySelectorAll(".desktop-list__link");
+
+    enlaces.forEach(enlace => {
+
+        // Limpiar espacios/saltos de línea
+        const texto = enlace.textContent.trim();
+
+        // Buscar SOLO el enlace FILTRO ANIME
+        if (texto === "FILTRO ANIME") {
+
+            // Eliminar el <li> padre completo
+            enlace.closest("li").remove();
+
+        }
+
+    });
+
+});
