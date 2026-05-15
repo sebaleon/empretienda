@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "afterbegin",
         `
         <label>Filtrar por: </label>
-          <select name="select-anime">
+          <select name="select-anime" id="select-anime" class="field__select border-radius">
             <option value="">Seleccionar Anime</option>
             <option value="dragonball">Dragon Ball</option>
             <option value="onepiece">One Piece</option>
