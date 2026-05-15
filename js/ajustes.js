@@ -94,23 +94,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (textoURL === "figuras-y-coleccionables/anime") {
 
-
-
     contenedor.insertAdjacentHTML(
         "afterbegin",
         `
-        <div class="filtro-contenedor">
-            Filtrar por: 
-                   <a href="https://www.purcua.com.ar/filtro-anime/dragon-ball" class="mi-boton">Dragon Ball</a> 
-                   <a href="https://www.purcua.com.ar/filtro-anime/onepiece" class="mi-boton">One Piece</a>                     
-                   <a href="https://www.purcua.com.ar/filtro-animen/aruto" class="mi-boton">Naruto</a> 
-                   <a href="https://www.purcua.com.ar/filtro-anime/jujutsu" class="mi-boton">Jujutsu Kaisen</a>
-                   <a href="https://www.purcua.com.ar/filtro-anime/bleach" class="mi-boton">Bleach</a> 
-                   <a href="https://www.purcua.com.ar/filtro-anime/sailor" class="mi-boton">Sailor Moon</a>
-                   <a href="https://www.purcua.com.ar/filtro-anime/demonslayer" class="mi-boton">Demon Slayer</a>
-                   <a href="https://www.purcua.com.ar/filtro-anime/pokemon" class="mi-boton">Pokémon</a>
-                   <a href="https://www.purcua.com.ar/filtro-anime/mha" class="mi-boton">My Hero Academia</a>
-        </div>
+          <select name="select-anime">
+            <option value="" selected>Seleccionar Anime</option>
+            <option value="dragonball" selected>Dragon Ball</option>
+            <option value="onepiece">One Piece</option>
+            <option value="bleach">Bleach</option>
+          </select>
         `);
     }
 });
