@@ -142,25 +142,7 @@ const resultado = window.location.pathname.split("/")[1];
 
 
 // Redirección al cambiar
-document.getElementById("select-anime").addEventListener("change", function () {
 
-    const valor = this.value;
-
-    if (valor === "dragonball") {
-
-        window.location.href = "https://www.purcua.com.ar/filtro-anime/dragon-ball";
-
-    } else if (valor === "onepiece") {
-
-        window.location.href = "https://www.purcua.com.ar/filtro-anime/onepiece";
-
-    } else if (valor === "bleach") {
-
-        window.location.href = "https://www.purcua.com.ar/filtro-anime/bleach";
-
-    }
-
-});
 
 
 // ELIMINAR FILTROS
