@@ -98,12 +98,12 @@ document.addEventListener("DOMContentLoaded", function () {
         "afterbegin",
         `
         <label>Filtrar por: </label>
-          <select name="select-anime" id="select-anime" class="field__select border-radius">
+        <select id="select-anime">
             <option value="">Seleccionar Anime</option>
             <option value="dragonball">Dragon Ball</option>
             <option value="onepiece">One Piece</option>
             <option value="bleach">Bleach</option>
-          </select>
+        </select>
         `);
     }
 });
