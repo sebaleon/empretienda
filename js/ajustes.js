@@ -115,13 +115,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+// boton <volver
 document.addEventListener("DOMContentLoaded", function () {
     
 const partes = window.location.pathname.split("/").filter(Boolean);
 // Tomar solo las primeras 2 partes
 const resultado = partes.slice(0, 2).join("/");
 
-    if (resultado === "filtro-tazas/anime") {
+    if (resultado === "filtro-anime") {
 
     // Buscar el UL
     const breadcrumb = document.querySelector(".category-feed__breadcrumb");
