@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const texto = enlace.textContent.trim();
 
         // Buscar SOLO el enlace FILTRO ANIME
-        if (texto === "FILTRO ANIME") {
+        if (texto === "FILTRO ANIME" || texto === "FANDOM") {
 
             // Eliminar el <li> padre completo
             enlace.closest("li").remove();
