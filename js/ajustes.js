@@ -1,4 +1,23 @@
 //// INICIO
+// imagen random bolsita golosinera
+document.addEventListener("DOMContentLoaded", function(event) {
+  
+////
+function getRandomImage(arr) {
+  const length = arr.length;
+  const randomIndex = Math.floor(length * Math.random())
+  return arr[randomIndex]
+}
+let img=[    {src:'https://d22fxaf9t8d39k.cloudfront.net/ac434dae6d18533b754811ffed245ff8e63bb4cf1c8a1c3961081aea4f53c68031350.jpg',},{src:'https://i.imgur.com/r6GlbT9.jpg',},{src:'https://i.imgur.com/pV3Rct8.jpg',},{src:'https://i.imgur.com/oRutIOk.png',},{src:'https://i.imgur.com/bf1KAWz.jpeg',},{src:'https://i.imgur.com/22wjQDw.jpg',},{src:'https://i.imgur.com/QftH2KH.jpeg',},];
+let lis = document.querySelector('.block-grill-images__grid-item--full').getElementsByTagName('img');
+[].forEach.call(lis, (element, index) => {
+  if (element.className == 'block-grill-images__image') {  
+      //ramdom      
+      document.querySelector('.block-grill-images__image').src = 
+      getRandomImage(img)['src'];}});
+
+});
+
 // ELIMINAR DE "MAS PRODUCTOS" FANDOM Y FILTRO ANIME
 document.addEventListener("DOMContentLoaded", function () {
 
