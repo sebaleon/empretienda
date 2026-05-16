@@ -378,6 +378,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+// ELIMINAR PERSONALIZADOS DE PRODUCTOS MOBILE
+document.addEventListener("DOMContentLoaded", function () {
+
+    const enlaces = document.querySelectorAll(".mobile-menu-sidenav__item-link");
+
+    enlaces.forEach(enlace => {
+
+        const texto = enlace.textContent.trim();
+
+        // Opciones a eliminar
+        if (
+            texto === "PERSONALIZADOS" ||
+            texto === "PAPELERÍA PERSONALIZADA"
+        ) {
+
+            const item = enlace.closest("li");
+
+            if (item) {
+                item.remove();
+            }
+
+        }
+
+    });
+
+});
+
 // AGREGAR PERSONALIZADOS EN NAV MOBILE
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -407,32 +434,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Insertar debajo de INICIO
     itemInicio.insertAdjacentHTML("afterend", nuevoBoton);
-
-});
-
-// ELIMINAR PERSONALIZADOS DE PRODUCTOS MOBILE
-document.addEventListener("DOMContentLoaded", function () {
-
-    const enlaces = document.querySelectorAll(".mobile-menu-sidenav__item-link");
-
-    enlaces.forEach(enlace => {
-
-        const texto = enlace.textContent.trim();
-
-        // Opciones a eliminar
-        if (
-            texto === "PERSONALIZADOS" ||
-            texto === "PAPELERÍA PERSONALIZADA"
-        ) {
-
-            const item = enlace.closest("li");
-
-            if (item) {
-                item.remove();
-            }
-
-        }
-
-    });
 
 });
