@@ -250,7 +250,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (
             texto === "PERSONALIZADOS" ||
-            texto === "PAPELERÍA PERSONALIZADA"
+            texto === "PAPELERÍA PERSONALIZADA" ||
+            texto === "POR TEMATICA"
         ) {
 
             const item = enlace.closest("li");
