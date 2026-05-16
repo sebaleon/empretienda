@@ -239,6 +239,70 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+// ELIMINAR PERSONALIZADOS DE PRODUCTOS Y AGREGARLO AL LADO DE INICIO
+document.addEventListener("DOMContentLoaded", function () {
+
+    // =========================
+    // ELIMINAR OPCIONES
+    // =========================
+
+    const enlaces = document.querySelectorAll(".desktop-list__link");
+
+    enlaces.forEach(enlace => {
+
+        const texto = enlace.textContent.trim();
+
+        if (
+            texto === "PERSONALIZADOS" ||
+            texto === "PAPELERÍA PERSONALIZADA"
+        ) {
+
+            const item = enlace.closest("li");
+
+            if (item) {
+                item.remove();
+            }
+
+        }
+
+    });
+
+
+
+    // =========================
+    // AGREGAR BOTON PERSONALIZADOS
+    // AL LADO DE INICIO
+    // =========================
+
+    const menuDesktop = document.querySelector(".header-menu__desktop-list");
+
+    if (!menuDesktop) return;
+
+    const nuevoBoton = `
+        <li class="desktop-list__item text--primary">
+
+            <a href="https://www.purcua.com.ar/personalizados"
+               class="desktop-list__link">
+                PERSONALIZADOS
+            </a>
+
+        </li>
+    `;
+
+    // Buscar INICIO
+    const inicio = [...menuDesktop.querySelectorAll(".desktop-list__link")]
+        .find(link => link.textContent.trim() === "Inicio");
+
+    if (!inicio) return;
+
+    // Obtener LI padre
+    const itemInicio = inicio.closest("li");
+
+    // Insertar al lado de INICIO
+    itemInicio.insertAdjacentHTML("afterend", nuevoBoton);
+
+});
+
 
 /////////////////////////////////////// MOBILE /////////////////////////////////
 
