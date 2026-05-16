@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
     contenedor.insertAdjacentHTML(
         "afterbegin",
         `
-        <div>
+        <div class="filtro-anime">
         <span>Filtrar por: </span>
         <select id="select-anime" class="field__select border-radius">
             <option value="">Seleccionar Anime</option>
