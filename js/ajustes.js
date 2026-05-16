@@ -97,13 +97,15 @@ document.addEventListener("DOMContentLoaded", function () {
     contenedor.insertAdjacentHTML(
         "afterbegin",
         `
-        <label>Filtrar por: </label>
-        <select id="select-anime">
+        <div>
+        <span>Filtrar por: </span>
+        <select id="select-anime" class="field__select border-radius">
             <option value="">Seleccionar Anime</option>
             <option value="dragonball">Dragon Ball</option>
             <option value="onepiece">One Piece</option>
             <option value="bleach">Bleach</option>
         </select>
+        </div>
         `);
     }
 });
@@ -142,7 +144,30 @@ const resultado = window.location.pathname.split("/")[1];
 
 
 // Redirección al cambiar
+document.addEventListener("DOMContentLoaded", function () {
 
+  document.getElementById("select-anime").addEventListener("change", function () {
+  
+  
+      const valor = this.value;
+  
+      if (valor === "dragonball") {
+  
+          window.location.href = "https://www.purcua.com.ar/filtro-anime/dragon-ball";
+  
+      } else if (valor === "onepiece") {
+  
+          window.location.href = "https://www.purcua.com.ar/filtro-anime/onepiece";
+  
+      } else if (valor === "bleach") {
+  
+          window.location.href = "https://www.purcua.com.ar/filtro-anime/bleach";
+  
+      }
+  
+  });
+
+});
 
 
 // ELIMINAR FILTROS
