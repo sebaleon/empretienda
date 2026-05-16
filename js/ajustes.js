@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// ELIMINAR FILTROS
+// ELIMINAR FILTROS DESKTOP
 document.addEventListener("DOMContentLoaded", function () {
 
     const enlaces = document.querySelectorAll(".desktop-list__link");
@@ -185,6 +185,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Eliminar el <li> padre completo
             enlace.closest("li").remove();
+
+        }
+
+    });
+
+});
+
+// ELIMINAR FILTROS MOBILE
+document.addEventListener("DOMContentLoaded", function () {
+
+    const enlaces = document.querySelectorAll(".mobile-menu-sidenav__item-link");
+
+    enlaces.forEach(enlace => {
+
+        const texto = enlace.textContent.trim();
+
+        // Buscar exactamente "FILTRO ANIME"
+        if (texto === "FILTRO ANIME") {
+
+            // Eliminar el <li> contenedor completo
+            const item = enlace.closest("li");
+
+            if (item) {
+                item.remove();
+            }
 
         }
 
