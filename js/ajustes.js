@@ -1,3 +1,24 @@
+//// INICIO
+// ELIMINAR DE "MAS PRODUCTOS" FANDOM Y FILTRO ANIME
+document.addEventListener("DOMContentLoaded", function () {
+
+const lista = document.querySelector('.block-categories-carrousel__list');
+
+if (lista) {
+  lista.querySelectorAll('a').forEach(link => {
+    const texto = link.textContent.trim();
+
+    if (
+      texto === 'FANDOM' ||
+      texto === 'FILTRO ANIME'
+    ) {
+      link.closest('li')?.remove();
+    }
+  });
+}
+
+});
+
 ///////////////////////
 // ocultar-sin-stock.js
 (() => {
