@@ -418,7 +418,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <li class="mobile-menu-sidenav__list-item">
             <a href="https://www.purcua.com.ar/personalizados"
                class="mobile-menu-sidenav__item-link">
-                PERSONALIZADOS
+                Personalizados
             </a>
         </li>
     `;
