@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!contenedor) return;
 
-    if (textoURL === "figuras-y-coleccionables/anime") {
+    if (textoURL === "coleccionables/anime") {
 
     contenedor.insertAdjacentHTML(
         "afterbegin",
@@ -133,7 +133,7 @@ const resultado = window.location.pathname.split("/")[1];
         "beforeend",
         `
         <li class="breadcrumb__item">
-            <a href="https://www.purcua.com.ar/figuras-y-coleccionables/anime">
+            <a href="https://www.purcua.com.ar/coleccionables/anime">
                 < VOLVER
             </a>
         </li>
