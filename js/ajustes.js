@@ -208,13 +208,13 @@ document.addEventListener("DOMContentLoaded", function () {
             <ul class="nav first">
 
                 <li class="desktop-list__subitem text--primary">
-                    <a href="https://www.purcua.com.ar/por-tematica/anime/dragon-ball" class="desktop-list__link">
+                    <a href="https://www.purcua.com.ar/fandom/dragon-ball" class="desktop-list__link">
                         Dragon Ball
                     </a>
                 </li>
 
                 <li class="desktop-list__subitem text--primary">
-                    <a href="https://www.purcua.com.ar/harry-potter" class="desktop-list__link">
+                    <a href="https://www.purcua.com.ar/fandom/harry-potter" class="desktop-list__link">
                         Harry Potter
                     </a>
                 </li>
@@ -346,14 +346,14 @@ document.addEventListener("DOMContentLoaded", function () {
             <ul class="mobile-menu-sidenav__sublist uk-nav-default uk-nav-sub uk-nav-parent-icon uk-nav">
 
                 <li class="mobile-menu-sidenav__list-item">
-                    <a href="https://www.purcua.com.ar/por-tematica/dragon-ball"
+                    <a href="https://www.purcua.com.ar/fandom/dragon-ball"
                        class="mobile-menu-sidenav__item-link">
                         Dragon Ball
                     </a>
                 </li>
 
                 <li class="mobile-menu-sidenav__list-item">
-                    <a href="https://www.purcua.com.ar/harry-potter"
+                    <a href="https://www.purcua.com.ar/fandom/harry-potter"
                        class="mobile-menu-sidenav__item-link">
                         Harry Potter
                     </a>
