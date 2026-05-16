@@ -195,63 +195,63 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // menu por tematica
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
 
-    // Buscar el item PRODUCTOS
-    const productosItem = document.querySelector(".header-menu__desktop-list");
+//     // Buscar el item PRODUCTOS
+//     const productosItem = document.querySelector(".header-menu__desktop-list");
 
-    if (!productosItem) return;
+//     if (!productosItem) return;
 
-    // Crear nuevo menú
-    const nuevoMenu = `
-        <li class="desktop-list__item text--primary">
+//     // Crear nuevo menú
+//     const nuevoMenu = `
+//         <li class="desktop-list__item text--primary">
             
-            <a href="#" class="desktop-list__link">
-                POR TEMATICA
-                <i class="desktop-list__down-icon text--primary fas fa-chevron-down"></i>
-            </a>
+//             <a href="#" class="desktop-list__link">
+//                 POR TEMATICA
+//                 <i class="desktop-list__down-icon text--primary fas fa-chevron-down"></i>
+//             </a>
 
-            <ul class="nav first">
+//             <ul class="nav first">
 
-                <li class="desktop-list__subitem text--primary">
-                    <a href="https://www.purcua.com.ar/fandom/dragon-ball" class="desktop-list__link">
-                        Dragon Ball
-                    </a>
-                </li>
+//                 <li class="desktop-list__subitem text--primary">
+//                     <a href="https://www.purcua.com.ar/fandom/dragon-ball" class="desktop-list__link">
+//                         Dragon Ball
+//                     </a>
+//                 </li>
 
-                <li class="desktop-list__subitem text--primary">
-                    <a href="https://www.purcua.com.ar/fandom/harry-potter" class="desktop-list__link">
-                        Harry Potter
-                    </a>
-                </li>
+//                 <li class="desktop-list__subitem text--primary">
+//                     <a href="https://www.purcua.com.ar/fandom/harry-potter" class="desktop-list__link">
+//                         Harry Potter
+//                     </a>
+//                 </li>
 
-                <li class="desktop-list__subitem text--primary">
-                    <a href="https://www.purcua.com.ar/fandom/gaming" class="desktop-list__link">
-                        Gaming
-                    </a>
-                </li>
+//                 <li class="desktop-list__subitem text--primary">
+//                     <a href="https://www.purcua.com.ar/fandom/gaming" class="desktop-list__link">
+//                         Gaming
+//                     </a>
+//                 </li>
 
-                <li class="desktop-list__subitem text--primary">
-                    <a href="https://www.purcua.com.ar/fandom/retro" class="desktop-list__link">
-                        Retro
-                    </a>
-                </li>
+//                 <li class="desktop-list__subitem text--primary">
+//                     <a href="https://www.purcua.com.ar/fandom/retro" class="desktop-list__link">
+//                         Retro
+//                     </a>
+//                 </li>
 
-            </ul>
+//             </ul>
 
-        </li>
-    `;
+//         </li>
+//     `;
 
-    // Insertar después del menú PRODUCTOS
-    const menuProductos = productosItem.querySelector(".desktop-list__item:nth-child(2)");
+//     // Insertar después del menú PRODUCTOS
+//     const menuProductos = productosItem.querySelector(".desktop-list__item:nth-child(2)");
 
-    if (menuProductos) {
+//     if (menuProductos) {
 
-        menuProductos.insertAdjacentHTML("afterend", nuevoMenu);
+//         menuProductos.insertAdjacentHTML("afterend", nuevoMenu);
 
-    }
+//     }
 
-});
+// });
 
 // ELIMINAR PERSONALIZADOS DE PRODUCTOS Y AGREGARLO AL LADO DE INICIO
 document.addEventListener("DOMContentLoaded", function () {
@@ -346,55 +346,55 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // AGREGAR MENU POR TEMATICA EN NAV MOBILE
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
 
-    // Buscar menú mobile
-    const menuMobile = document.querySelector(".mobile-menu-sidenav__list");
+//     // Buscar menú mobile
+//     const menuMobile = document.querySelector(".mobile-menu-sidenav__list");
 
-    if (!menuMobile) return;
+//     if (!menuMobile) return;
 
-    // Crear nuevo menú desplegable
-    const nuevoMenu = `
-        <li class="mobile-menu-sidenav__item-link uk-parent">
+//     // Crear nuevo menú desplegable
+//     const nuevoMenu = `
+//         <li class="mobile-menu-sidenav__item-link uk-parent">
 
-            <a href="#" class="mobile-menu-sidenav__item-link">
-                Por Tematica
-            </a>
+//             <a href="#" class="mobile-menu-sidenav__item-link">
+//                 Por Tematica
+//             </a>
 
-            <ul class="mobile-menu-sidenav__sublist uk-nav-default uk-nav-sub uk-nav-parent-icon uk-nav">
+//             <ul class="mobile-menu-sidenav__sublist uk-nav-default uk-nav-sub uk-nav-parent-icon uk-nav">
 
-                <li class="mobile-menu-sidenav__list-item">
-                    <a href="https://www.purcua.com.ar/fandom/dragon-ball"
-                       class="mobile-menu-sidenav__item-link">
-                        Dragon Ball
-                    </a>
-                </li>
+//                 <li class="mobile-menu-sidenav__list-item">
+//                     <a href="https://www.purcua.com.ar/fandom/dragon-ball"
+//                        class="mobile-menu-sidenav__item-link">
+//                         Dragon Ball
+//                     </a>
+//                 </li>
 
-                <li class="mobile-menu-sidenav__list-item">
-                    <a href="https://www.purcua.com.ar/fandom/harry-potter"
-                       class="mobile-menu-sidenav__item-link">
-                        Harry Potter
-                    </a>
-                </li>
+//                 <li class="mobile-menu-sidenav__list-item">
+//                     <a href="https://www.purcua.com.ar/fandom/harry-potter"
+//                        class="mobile-menu-sidenav__item-link">
+//                         Harry Potter
+//                     </a>
+//                 </li>
 
-                <li class="mobile-menu-sidenav__list-item">
-                    <a href="https://www.purcua.com.ar/fandom/gaming"
-                       class="mobile-menu-sidenav__item-link">
-                        Gaming
-                    </a>
-                </li>
+//                 <li class="mobile-menu-sidenav__list-item">
+//                     <a href="https://www.purcua.com.ar/fandom/gaming"
+//                        class="mobile-menu-sidenav__item-link">
+//                         Gaming
+//                     </a>
+//                 </li>
 
-                <li class="mobile-menu-sidenav__list-item">
-                    <a href="https://www.purcua.com.ar/fandom/retro"
-                       class="mobile-menu-sidenav__item-link">
-                        Retro
-                    </a>
-                </li>
+//                 <li class="mobile-menu-sidenav__list-item">
+//                     <a href="https://www.purcua.com.ar/fandom/retro"
+//                        class="mobile-menu-sidenav__item-link">
+//                         Retro
+//                     </a>
+//                 </li>
 
-            </ul>
+//             </ul>
 
-        </li>
-    `;
+//         </li>
+//     `;
 
     // Buscar el item PRODUCTOS
     const productos = [...menuMobile.querySelectorAll(".mobile-menu-sidenav__item-link")]
