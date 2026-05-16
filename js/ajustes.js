@@ -206,6 +206,18 @@ document.addEventListener("DOMContentLoaded", function () {
                     </a>
                 </li>
 
+                <li class="desktop-list__subitem text--primary">
+                    <a href="https://www.purcua.com.ar/fandom/gaming" class="desktop-list__link">
+                        Gaming
+                    </a>
+                </li>
+
+                <li class="desktop-list__subitem text--primary">
+                    <a href="https://www.purcua.com.ar/fandom/retro" class="desktop-list__link">
+                        Retro
+                    </a>
+                </li>
+
             </ul>
 
         </li>
@@ -343,6 +355,20 @@ document.addEventListener("DOMContentLoaded", function () {
                     <a href="https://www.purcua.com.ar/fandom/harry-potter"
                        class="mobile-menu-sidenav__item-link">
                         Harry Potter
+                    </a>
+                </li>
+
+                <li class="mobile-menu-sidenav__list-item">
+                    <a href="https://www.purcua.com.ar/fandom/gaming"
+                       class="mobile-menu-sidenav__item-link">
+                        Gaming
+                    </a>
+                </li>
+
+                <li class="mobile-menu-sidenav__list-item">
+                    <a href="https://www.purcua.com.ar/fandom/retro"
+                       class="mobile-menu-sidenav__item-link">
+                        Retro
                     </a>
                 </li>
 
