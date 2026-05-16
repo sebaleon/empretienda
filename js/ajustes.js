@@ -216,3 +216,50 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+// menu por tematica
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Buscar el item PRODUCTOS
+    const productosItem = document.querySelector(".header-menu__desktop-list");
+
+    if (!productosItem) return;
+
+    // Crear nuevo menú
+    const nuevoMenu = `
+        <li class="desktop-list__item text--primary">
+            
+            <a href="#" class="desktop-list__link">
+                POR TEMATICA
+                <i class="desktop-list__down-icon text--primary fas fa-chevron-down"></i>
+            </a>
+
+            <ul class="nav first">
+
+                <li class="desktop-list__subitem text--primary">
+                    <a href="https://www.purcua.com.ar/por-tematica/anime/dragon-ball" class="desktop-list__link">
+                        Dragon Ball
+                    </a>
+                </li>
+
+                <li class="desktop-list__subitem text--primary">
+                    <a href="https://www.purcua.com.ar/harry-potter" class="desktop-list__link">
+                        Harry Potter
+                    </a>
+                </li>
+
+            </ul>
+
+        </li>
+    `;
+
+    // Insertar después del menú PRODUCTOS
+    const menuProductos = productosItem.querySelector(".desktop-list__item:nth-child(2)");
+
+    if (menuProductos) {
+
+        menuProductos.insertAdjacentHTML("afterend", nuevoMenu);
+
+    }
+
+});
