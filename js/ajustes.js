@@ -312,7 +312,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const texto = enlace.textContent.trim();
 
         // Buscar exactamente "FILTRO ANIME"
-        if (texto === "FILTRO ANIME") {
+        if (texto === "FILTRO ANIME" || texto === "FANDOM") {
 
             // Eliminar el <li> contenedor completo
             const item = enlace.closest("li");
