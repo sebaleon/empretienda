@@ -26,12 +26,8 @@ window.addEventListener("load", (event) => {
     if (element.innerText.trim() == 'PERSONALIZADOS') {
        document.getElementsByClassName("desktop-list__link")[index].target = "_self";
        //element.style.color = '#ffffff';
-           element.style.backgroundColor = '#5FA6CF'; 
-    } 
-    if (element.innerText.trim() == 'PAPELERÍA') {
-       document.getElementsByClassName("desktop-list__link")[index].target = "_self";
-       //element.style.color = '#ffffff';
-           element.style.backgroundColor = '#BBE06D';  
+           element.style.backgroundColor = '#00fff7';
+           element.style.backgroundColor = '#5FA6CF';
     } 
   });
 });
