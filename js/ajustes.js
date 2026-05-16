@@ -192,31 +192,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// ELIMINAR FILTROS MOBILE
-document.addEventListener("DOMContentLoaded", function () {
-
-    const enlaces = document.querySelectorAll(".mobile-menu-sidenav__item-link");
-
-    enlaces.forEach(enlace => {
-
-        const texto = enlace.textContent.trim();
-
-        // Buscar exactamente "FILTRO ANIME"
-        if (texto === "FILTRO ANIME") {
-
-            // Eliminar el <li> contenedor completo
-            const item = enlace.closest("li");
-
-            if (item) {
-                item.remove();
-            }
-
-        }
-
-    });
-
-});
-
 // menu por tematica
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -261,5 +236,143 @@ document.addEventListener("DOMContentLoaded", function () {
         menuProductos.insertAdjacentHTML("afterend", nuevoMenu);
 
     }
+
+});
+
+
+/////////////////////////////////////// MOBILE /////////////////////////////////
+
+// ELIMINAR FILTROS MOBILE
+document.addEventListener("DOMContentLoaded", function () {
+
+    const enlaces = document.querySelectorAll(".mobile-menu-sidenav__item-link");
+
+    enlaces.forEach(enlace => {
+
+        const texto = enlace.textContent.trim();
+
+        // Buscar exactamente "FILTRO ANIME"
+        if (texto === "FILTRO ANIME") {
+
+            // Eliminar el <li> contenedor completo
+            const item = enlace.closest("li");
+
+            if (item) {
+                item.remove();
+            }
+
+        }
+
+    });
+//  
+});
+
+// AGREGAR MENU POR TEMATICA EN NAV MOBILE
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Buscar menú mobile
+    const menuMobile = document.querySelector(".mobile-menu-sidenav__list");
+
+    if (!menuMobile) return;
+
+    // Crear nuevo menú desplegable
+    const nuevoMenu = `
+        <li class="mobile-menu-sidenav__item-link uk-parent">
+
+            <a href="#" class="mobile-menu-sidenav__item-link">
+                Por Tematica
+            </a>
+
+            <ul class="mobile-menu-sidenav__sublist uk-nav-default uk-nav-sub uk-nav-parent-icon uk-nav">
+
+                <li class="mobile-menu-sidenav__list-item">
+                    <a href="https://www.purcua.com.ar/por-tematica/dragon-ball"
+                       class="mobile-menu-sidenav__item-link">
+                        Dragon Ball
+                    </a>
+                </li>
+
+                <li class="mobile-menu-sidenav__list-item">
+                    <a href="https://www.purcua.com.ar/harry-potter"
+                       class="mobile-menu-sidenav__item-link">
+                        Harry Potter
+                    </a>
+                </li>
+
+            </ul>
+
+        </li>
+    `;
+
+    // Buscar el item PRODUCTOS
+    const productos = [...menuMobile.querySelectorAll(".mobile-menu-sidenav__item-link")]
+        .find(link => link.textContent.trim() === "Productos");
+
+    if (!productos) return;
+
+    // Obtener LI padre
+    const itemProductos = productos.closest("li");
+
+    // Insertar debajo de PRODUCTOS
+    itemProductos.insertAdjacentHTML("afterend", nuevoMenu);
+
+});
+
+// AGREGAR PERSONALIZADOS EN NAV MOBILE
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Buscar menú mobile
+    const menuMobile = document.querySelector(".mobile-menu-sidenav__list");
+
+    if (!menuMobile) return;
+
+    // Crear nuevo botón
+    const nuevoBoton = `
+        <li class="mobile-menu-sidenav__list-item">
+            <a href="https://www.purcua.com.ar/personalizados"
+               class="mobile-menu-sidenav__item-link">
+                PERSONALIZADOS
+            </a>
+        </li>
+    `;
+
+    // Buscar INICIO
+    const inicio = [...menuMobile.querySelectorAll(".mobile-menu-sidenav__item-link")]
+        .find(link => link.textContent.trim() === "Inicio");
+
+    if (!inicio) return;
+
+    // Obtener LI padre
+    const itemInicio = inicio.closest("li");
+
+    // Insertar debajo de INICIO
+    itemInicio.insertAdjacentHTML("afterend", nuevoBoton);
+
+});
+
+// ELIMINAR PERSONALIZADOS DE PRODUCTOS MOBILE
+document.addEventListener("DOMContentLoaded", function () {
+
+    const enlaces = document.querySelectorAll(".mobile-menu-sidenav__item-link");
+
+    enlaces.forEach(enlace => {
+
+        const texto = enlace.textContent.trim();
+
+        // Opciones a eliminar
+        if (
+            texto === "PERSONALIZADOS" ||
+            texto === "PAPELERÍA PERSONALIZADA"
+        ) {
+
+            const item = enlace.closest("li");
+
+            if (item) {
+                item.remove();
+            }
+
+        }
+
+    });
 
 });
