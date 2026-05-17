@@ -40,50 +40,30 @@ if (lista) {
 
 ///////////////////////
 // ocultar-sin-stock.js
-(() => {
+document.addEventListener('DOMContentLoaded', () => {
 
-  const PRODUCT_SELECTOR = '.products-feed__product';
-  const OUT_STOCK_SELECTOR = '.products-feed__product-out-stock';
+  function ocultarSinStock() {
+    document.querySelectorAll('.products-feed__product').forEach(producto => {
+      const sinStock = producto.querySelector('.products-feed__product-out-stock');
 
-  function hideOutOfStockProducts() {
-
-    const products = document.querySelectorAll(PRODUCT_SELECTOR);
-
-    products.forEach(product => {
-
-      const outOfStock = product.querySelector(OUT_STOCK_SELECTOR);
-
-      if (outOfStock) {
-        product.style.display = 'none';
+      if (sinStock) {
+        producto.remove();
       }
-
     });
-
   }
 
-  function init() {
+  ocultarSinStock();
 
-    hideOutOfStockProducts();
+  const observer = new MutationObserver(() => {
+    ocultarSinStock();
+  });
 
-    // Detecta productos cargados dinámicamente
-    const observer = new MutationObserver(() => {
-      hideOutOfStockProducts();
-    });
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
 
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
-
-})();
+});
 
 // filtros
 document.addEventListener("DOMContentLoaded", function () {
