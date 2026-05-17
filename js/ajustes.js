@@ -1,4 +1,8 @@
 //// INICIO
+///////////////////////
+// ocultar-sin-stock.js
+
+
 // imagen random bolsita golosinera
 document.addEventListener("DOMContentLoaded", function(event) {
   
@@ -38,32 +42,6 @@ if (lista) {
 
 });
 
-///////////////////////
-// ocultar-sin-stock.js
-document.addEventListener('DOMContentLoaded', () => {
-
-  function ocultarSinStock() {
-    document.querySelectorAll('.products-feed__product').forEach(producto => {
-      const sinStock = producto.querySelector('.products-feed__product-out-stock');
-
-      if (sinStock) {
-        producto.remove();
-      }
-    });
-  }
-
-  ocultarSinStock();
-
-  const observer = new MutationObserver(() => {
-    ocultarSinStock();
-  });
-
-  observer.observe(document.body, {
-    childList: true,
-    subtree: true
-  });
-
-});
 
 // filtros
 document.addEventListener("DOMContentLoaded", function () {
