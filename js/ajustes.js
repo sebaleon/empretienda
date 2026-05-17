@@ -354,19 +354,19 @@ document.addEventListener("DOMContentLoaded", function () {
 //         </li>
 //     `;
 
-    // Buscar el item PRODUCTOS
-    const productos = [...menuMobile.querySelectorAll(".mobile-menu-sidenav__item-link")]
-        .find(link => link.textContent.trim() === "Productos");
+//     // Buscar el item PRODUCTOS
+//     const productos = [...menuMobile.querySelectorAll(".mobile-menu-sidenav__item-link")]
+//         .find(link => link.textContent.trim() === "Productos");
 
-    if (!productos) return;
+//     if (!productos) return;
 
-    // Obtener LI padre
-    const itemProductos = productos.closest("li");
+//     // Obtener LI padre
+//     const itemProductos = productos.closest("li");
 
-    // Insertar debajo de PRODUCTOS
-    itemProductos.insertAdjacentHTML("afterend", nuevoMenu);
+//     // Insertar debajo de PRODUCTOS
+//     itemProductos.insertAdjacentHTML("afterend", nuevoMenu);
 
-});
+// });
 
 // ELIMINAR PERSONALIZADOS DE PRODUCTOS MOBILE
 document.addEventListener("DOMContentLoaded", function () {
