@@ -297,12 +297,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// ELIMINAR CATEGORIAS MOBILEdocument.addEventListener("DOMContentLoaded", function () {
+// ELIMINAR CATEGORIAS MOBILE
+document.addEventListener("DOMContentLoaded", function () {
 
     const textsToRemove = [
         "FANDOM",
         "FILTRO ANIME"
     ];
+
     function removeCategories() {
 
         const categoryLists = document.querySelectorAll(
@@ -343,8 +345,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
-
-
 
 // ELIMINAR PERSONALIZADOS DE PRODUCTOS MOBILE
 document.addEventListener("DOMContentLoaded", function () {
