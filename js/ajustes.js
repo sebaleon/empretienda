@@ -44,7 +44,7 @@ let lis = document.querySelector('.block-grill-images__grid-item--full').getElem
 
 });
 
-// ELIMINAR DE "MAS PRODUCTOS" FANDOM Y FILTRO ANIME
+// ELIMINAR DE "MAS PRODUCTOS" FANDOM Y FILTRO ANIME PAGINA INICIAL
 document.addEventListener("DOMContentLoaded", function () {
 
 const lista = document.querySelector('.block-categories-carrousel__list');
@@ -155,112 +155,58 @@ document.addEventListener("DOMContentLoaded", function () {
 // ELIMINAR FILTROS DESKTOP
 document.addEventListener("DOMContentLoaded", function () {
 
-    const enlaces = document.querySelectorAll(".desktop-list__link");
+    const urlBase = window.location.origin;  
 
-    enlaces.forEach(enlace => {
+    const linksToRemove = [
+        urlBase + "/fandom",
+        urlBase + "/filtro-anime"
+    ];
 
-        // Limpiar espacios/saltos de línea
-        const texto = enlace.textContent.trim();
+    linksToRemove.forEach(href => {
 
-        // Buscar SOLO el enlace FILTRO ANIME
-        if (texto === "FILTRO ANIME" || texto === "FANDOM") {
+        const link = document.querySelector(
+            `.desktop-list__menu a[href="${href}"]`
+        );
 
-            // Eliminar el <li> padre completo
-            enlace.closest("li").remove();
-
+        if (link) {
+            link.closest("ul.uk-navbar-dropdown-nav")?.remove();
         }
 
     });
 
 });
 
-// menu por tematica
-// document.addEventListener("DOMContentLoaded", function () {
+// ELIMINAR FILTROS DE CATEGORIAS TEMA ELARA DESKTOP
 
-//     // Buscar el item PRODUCTOS
-//     const productosItem = document.querySelector(".header-menu__desktop-list");
-
-//     if (!productosItem) return;
-
-//     // Crear nuevo menú
-//     const nuevoMenu = `
-//         <li class="desktop-list__item text--primary">
-            
-//             <a href="#" class="desktop-list__link">
-//                 POR TEMATICA
-//                 <i class="desktop-list__down-icon text--primary fas fa-chevron-down"></i>
-//             </a>
-
-//             <ul class="nav first">
-
-//                 <li class="desktop-list__subitem text--primary">
-//                     <a href="https://www.purcua.com.ar/fandom/dragon-ball" class="desktop-list__link">
-//                         Dragon Ball
-//                     </a>
-//                 </li>
-
-//                 <li class="desktop-list__subitem text--primary">
-//                     <a href="https://www.purcua.com.ar/fandom/harry-potter" class="desktop-list__link">
-//                         Harry Potter
-//                     </a>
-//                 </li>
-
-//                 <li class="desktop-list__subitem text--primary">
-//                     <a href="https://www.purcua.com.ar/fandom/gaming" class="desktop-list__link">
-//                         Gaming
-//                     </a>
-//                 </li>
-
-//                 <li class="desktop-list__subitem text--primary">
-//                     <a href="https://www.purcua.com.ar/fandom/retro" class="desktop-list__link">
-//                         Retro
-//                     </a>
-//                 </li>
-
-//             </ul>
-
-//         </li>
-//     `;
-
-//     // Insertar después del menú PRODUCTOS
-//     const menuProductos = productosItem.querySelector(".desktop-list__item:nth-child(2)");
-
-//     if (menuProductos) {
-
-//         menuProductos.insertAdjacentHTML("afterend", nuevoMenu);
-
-//     }
-
-// });
-
-// ELIMINAR PERSONALIZADOS DE PRODUCTOS Y AGREGARLO AL LADO DE INICIO
+// ELIMINAR PERSONALIZADOS DEL MENU PRODUCTOS 
 document.addEventListener("DOMContentLoaded", function () {
 
-    // =========================
-    // ELIMINAR OPCIONES
-    // =========================
+    const categoryList = document.querySelector(
+        ".products-feed__categories-list" 
+    );
 
-    const enlaces = document.querySelectorAll(".desktop-list__link");
+    if (!categoryList) return;
 
-    enlaces.forEach(enlace => {
+    const textsToRemove = [
+        "FANDOM",
+        "FILTRO ANIME"
+    ];
+console.log(textsToRemove);
+    categoryList.querySelectorAll("li").forEach(li => {
 
-        const texto = enlace.textContent.trim();
+        const link = li.querySelector("a");
 
-        if (
-            texto === "PERSONALIZADOS" ||
-            texto === "PAPELERÍA PERSONALIZADA"
-        ) {
+        if (!link) return;
 
-            const item = enlace.closest("li");
+        const text = link.textContent.trim();
 
-            if (item) {
-                item.remove();
-            }
-
+        if (textsToRemove.includes(text)) {
+            li.remove();
         }
 
     });
 
+});
 
 
     // =========================
@@ -325,70 +271,55 @@ document.addEventListener("DOMContentLoaded", function () {
 //  
 });
 
-// AGREGAR MENU POR TEMATICA EN NAV MOBILE
-// document.addEventListener("DOMContentLoaded", function () {
 
-//     // Buscar menú mobile
-//     const menuMobile = document.querySelector(".mobile-menu-sidenav__list");
+// ELIMINAR CATEGORIAS MOBILEdocument.addEventListener("DOMContentLoaded", function () {
 
-//     if (!menuMobile) return;
+    const textsToRemove = [
+        "FANDOM",
+        "FILTRO ANIME"
+    ];
+    function removeCategories() {
 
-//     // Crear nuevo menú desplegable
-//     const nuevoMenu = `
-//         <li class="mobile-menu-sidenav__item-link uk-parent">
+        const categoryLists = document.querySelectorAll(
+            ".products-feed__categories-list"
+        );
 
-//             <a href="#" class="mobile-menu-sidenav__item-link">
-//                 Por Tematica
-//             </a>
+        categoryLists.forEach(list => {
 
-//             <ul class="mobile-menu-sidenav__sublist uk-nav-default uk-nav-sub uk-nav-parent-icon uk-nav">
+            list.querySelectorAll("li").forEach(li => {
 
-//                 <li class="mobile-menu-sidenav__list-item">
-//                     <a href="https://www.purcua.com.ar/fandom/dragon-ball"
-//                        class="mobile-menu-sidenav__item-link">
-//                         Dragon Ball
-//                     </a>
-//                 </li>
+                const link = li.querySelector("a");
 
-//                 <li class="mobile-menu-sidenav__list-item">
-//                     <a href="https://www.purcua.com.ar/fandom/harry-potter"
-//                        class="mobile-menu-sidenav__item-link">
-//                         Harry Potter
-//                     </a>
-//                 </li>
+                if (!link) return;
 
-//                 <li class="mobile-menu-sidenav__list-item">
-//                     <a href="https://www.purcua.com.ar/fandom/gaming"
-//                        class="mobile-menu-sidenav__item-link">
-//                         Gaming
-//                     </a>
-//                 </li>
+                const text = link.textContent.trim();
 
-//                 <li class="mobile-menu-sidenav__list-item">
-//                     <a href="https://www.purcua.com.ar/fandom/retro"
-//                        class="mobile-menu-sidenav__item-link">
-//                         Retro
-//                     </a>
-//                 </li>
+                if (textsToRemove.includes(text)) {
+                    li.remove();
+                }
 
-//             </ul>
+            });
 
-//         </li>
-//     `;
+        });
 
-//     // Buscar el item PRODUCTOS
-//     const productos = [...menuMobile.querySelectorAll(".mobile-menu-sidenav__item-link")]
-//         .find(link => link.textContent.trim() === "Productos");
+    }
 
-//     if (!productos) return;
+    // ejecutar inicialmente
+    removeCategories();
 
-//     // Obtener LI padre
-//     const itemProductos = productos.closest("li");
+    // observar cambios dinámicos del DOM
+    const observer = new MutationObserver(() => {
+        removeCategories();
+    });
 
-//     // Insertar debajo de PRODUCTOS
-//     itemProductos.insertAdjacentHTML("afterend", nuevoMenu);
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
 
-// });
+});
+
+
 
 // ELIMINAR PERSONALIZADOS DE PRODUCTOS MOBILE
 document.addEventListener("DOMContentLoaded", function () {
