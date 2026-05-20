@@ -44,6 +44,33 @@ let lis = document.querySelector('.block-grill-images__grid-item--full').getElem
 
 });
 
+// texto imagenes solo ilustrativas desktop y mobile
+document.addEventListener("DOMContentLoaded", function () {
+
+    const descriptions = document.querySelectorAll(
+        ".product-vip__description"
+    );
+
+    descriptions.forEach(description => {
+
+        // evitar duplicados
+        if (description.querySelector(".imagenes-ilustrativas")) return;
+
+        const p = document.createElement("p");
+
+        p.textContent = "-- Las imágenes son solo ilustrativas --";
+        p.classList.add("imagenes-ilustrativas");
+
+        // estilos
+        p.style.color = "gray";
+        p.style.fontStyle = "italic";
+
+        description.appendChild(p);
+
+    });
+
+});
+
 // ELIMINAR DE "MAS PRODUCTOS" FANDOM Y FILTRO ANIME PAGINA INICIAL
 document.addEventListener("DOMContentLoaded", function () {
 
