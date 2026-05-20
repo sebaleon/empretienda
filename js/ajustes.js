@@ -233,8 +233,6 @@ console.log(textsToRemove);
 
     });
 
-});
-
 
     // =========================
     // AGREGAR BOTON PERSONALIZADOS
