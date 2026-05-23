@@ -204,8 +204,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // ELIMINAR FILTROS DE CATEGORIAS TEMA ELARA DESKTOP
-
-// ELIMINAR PERSONALIZADOS DEL MENU PRODUCTOS 
 document.addEventListener("DOMContentLoaded", function () {
 
     const categoryList = document.querySelector(
@@ -218,7 +216,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "FANDOM",
         "FILTRO FIGURAS ANIME"
     ];
-console.log(textsToRemove);
+
     categoryList.querySelectorAll("li").forEach(li => {
 
         const link = li.querySelector("a");
