@@ -233,6 +233,65 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+// ELIMINAR PERSONALIZADOS DEL MENU PRODUCTOS
+document.addEventListener("DOMContentLoaded", function () {
+
+    // seleccionar solo el menú principal donde está PERSONALIZADOS
+    const menu = document.querySelector(".desktop-list__menu");
+
+    if (!menu) return;
+
+    // buscar el enlace con el texto PERSONALIZADOS dentro del menú
+    const link = [...menu.querySelectorAll("a")].find(a =>
+        a.textContent.trim() === "PERSONALIZADOS"
+    );
+
+    if (link) {
+        // eliminar el <ul> contenedor de ese enlace
+        const ul = link.closest("ul.uk-navbar-dropdown-nav");
+        if (ul) ul.remove();
+    }
+
+});
+
+// AGREGAR PERSONALIZADOS AL LADO DEL BOTON INICIO
+document.addEventListener("DOMContentLoaded", function () {
+
+    const menu = document.querySelector(".header-menu__desktop-list");
+
+    if (!menu) return;
+
+    // buscar el item INICIO
+    const inicioItem = [...menu.querySelectorAll(".desktop-list__item")]
+        .find(item => {
+            const link = item.querySelector("a");
+            return link && link.textContent.trim() === "Inicio";
+        });
+
+    if (!inicioItem) return;
+
+    // evitar duplicados
+    const alreadyExists = [...menu.querySelectorAll("a")]
+        .some(a => a.href === "https://www.purcua.com.ar/personalizados");
+
+    if (alreadyExists) return;
+
+    // crear nuevo LI
+    const li = document.createElement("li");
+    li.className = "desktop-list__item text--primary";
+
+    li.innerHTML = `
+        <a href="https://www.purcua.com.ar/personalizados"
+           class="desktop-list__link">
+            PERSONALIZADOS
+        </a>
+    `;
+
+    // insertar al lado de INICIO
+    inicioItem.insertAdjacentElement("afterend", li);
+
+});
+
 
 /////////////////////////////////////// MOBILE /////////////////////////////////
 
