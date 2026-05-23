@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// ELIMINAR DE "MAS PRODUCTOS" FANDOM Y FILTRO ANIME PAGINA INICIAL
+// ELIMINAR DE "MAS PRODUCTOS" FANDOM Y FILTRO FIGURAS ANIME PAGINA INICIAL
 document.addEventListener("DOMContentLoaded", function () {
 
 const lista = document.querySelector('.block-categories-carrousel__list');
@@ -166,11 +166,11 @@ document.addEventListener("DOMContentLoaded", function () {
   
       } else if (valor === "onepiece") {
   
-          window.location.href = "https://www.purcua.com.ar/filtro-anime/onepiece";
+          window.location.href = "https://www.purcua.com.ar/filtro-figuras-anime/onepiece";
   
       } else if (valor === "bleach") {
   
-          window.location.href = "https://www.purcua.com.ar/filtro-anime/bleach";
+          window.location.href = "https://www.purcua.com.ar/filtro-figuras-anime/bleach";
   
       }
   
@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const linksToRemove = [
         urlBase + "/fandom",
-        urlBase + "/filtro-anime"
+        urlBase + "/filtro-figuras-anime"
     ];
 
     linksToRemove.forEach(href => {
@@ -216,7 +216,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const textsToRemove = [
         "FANDOM",
-        "FILTRO ANIME"
+        "FILTRO FIGURAS ANIME"
     ];
 console.log(textsToRemove);
     categoryList.querySelectorAll("li").forEach(li => {
@@ -281,7 +281,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const texto = enlace.textContent.trim();
 
         // Buscar exactamente "FILTRO ANIME"
-        if (texto === "FILTRO ANIME" || texto === "FANDOM") {
+        if (texto === "FILTRO FIGURAS ANIME" || texto === "FANDOM") {
 
             // Eliminar el <li> contenedor completo
             const item = enlace.closest("li");
@@ -302,7 +302,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const textsToRemove = [
         "FANDOM",
-        "FILTRO ANIME"
+        "FILTRO FIGURAS ANIME"
     ];
 
     function removeCategories() {
