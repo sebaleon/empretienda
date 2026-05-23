@@ -82,7 +82,7 @@ if (lista) {
 
     if (
       texto === 'FANDOM' ||
-      texto === 'FILTRO ANIME'
+      texto === 'FILTRO FIGURAS ANIME'
     ) {
       link.closest('li')?.remove();
     }
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!contenedor) return;
 
-    if (textoURL === "coleccionables/anime") {
+    if (textoURL === "figuras-y-coleccionables/anime") {
 
     contenedor.insertAdjacentHTML(
         "afterbegin",
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // parseo url
 const resultado = window.location.pathname.split("/")[1];
 
-    if (resultado === "filtro-anime") {
+    if (resultado === "filtro-figuras-anime") {
 
     // Buscar el UL
     const breadcrumb = document.querySelector(".category-feed__breadcrumb");
@@ -142,7 +142,7 @@ const resultado = window.location.pathname.split("/")[1];
         "beforeend",
         `
         <li class="breadcrumb__item">
-            <a href="https://www.purcua.com.ar/coleccionables/anime">
+            <a href="https://www.purcua.com.ar/figuras-y-coleccionables/anime">
                 < VOLVER
             </a>
         </li>
@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
       if (valor === "dragonball") {
   
-          window.location.href = "https://www.purcua.com.ar/filtro-anime/dragon-ball";
+          window.location.href = "https://www.purcua.com.ar/filtro-figuras-anime/dragon-ball";
   
       } else if (valor === "onepiece") {
   
