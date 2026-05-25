@@ -113,6 +113,16 @@ document.addEventListener("DOMContentLoaded", function () {
             <option value="dragonball">Dragon Ball</option>
             <option value="onepiece">One Piece</option>
             <option value="bleach">Bleach</option>
+            <option value="naruto">Naruto</option>
+            <option value="sailormoon">Sailor Moon</option>
+            <option value="jujutsukaisen">Jujutsu Kaisen</option>
+            <option value="chainsawman">Chainsaw Man</option>
+            <option value="demonslayer">Demon Slayer</option>
+            <option value="mha">My Hero Academia</option>
+            <option value="bluelock">Bluelock</option>
+            <option value="pokemon">Pokémon</option>
+            <option value="sxf">Spy x Family</option>
+            <option value="saintseiya">Saint Seiya</option>
         </select>
         </div>
         `);
