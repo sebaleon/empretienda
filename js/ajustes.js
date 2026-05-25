@@ -170,19 +170,33 @@ document.addEventListener("DOMContentLoaded", function () {
   
       const valor = this.value;
   
-      if (valor === "dragonball") {
-  
-          window.location.href = "https://www.purcua.com.ar/filtro-figuras-anime/dragon-ball";
-  
-      } else if (valor === "onepiece") {
-  
-          window.location.href = "https://www.purcua.com.ar/filtro-figuras-anime/onepiece";
-  
-      } else if (valor === "bleach") {
-  
-          window.location.href = "https://www.purcua.com.ar/filtro-figuras-anime/bleach";
-  
-      }
+      if (valor === "dragonball") {  
+          window.location.href = "https://www.purcua.com.ar/filtro-figuras-anime/dragon-ball";  
+      } else if (valor === "onepiece") {  
+          window.location.href = "https://www.purcua.com.ar/filtro-figuras-anime/onepiece";  
+      } else if (valor === "bleach") {  
+          window.location.href = "https://www.purcua.com.ar/filtro-figuras-anime/bleach";  
+      } else if (valor === "naruto") {
+  		  window.location.href = "https://www.purcua.com.ar/filtro-figuras-anime/naruto";
+  	  } else if (valor === "sailormoon") {
+  		  window.location.href = "https://www.purcua.com.ar/filtro-figuras-anime/sailormoon";
+  	  } else if (valor === "jujutsukaisen") {
+  		  window.location.href = "https://www.purcua.com.ar/filtro-figuras-anime/jujutsukaisen";
+  	  } else if (valor === "chainsawman") {
+  		  window.location.href = "https://www.purcua.com.ar/filtro-figuras-anime/chainsawman";
+  	  } else if (valor === "demonslayer") {
+  		  window.location.href = "https://www.purcua.com.ar/filtro-figuras-anime/demonslayer";
+  	  } else if (valor === "mha") {
+  		  window.location.href = "https://www.purcua.com.ar/filtro-figuras-anime/mha";
+  	  } else if (valor === "bluelock") {
+  		  window.location.href = "https://www.purcua.com.ar/filtro-figuras-anime/bluelock";
+  	  } else if (valor === "pokemon") {
+  		  window.location.href = "https://www.purcua.com.ar/filtro-figuras-anime/pokemon";
+  	  } else if (valor === "sxf") {
+  		  window.location.href = "https://www.purcua.com.ar/filtro-figuras-anime/sxf";
+  	  } else if (valor === "saintseiya") {
+  		  window.location.href = "https://www.purcua.com.ar/filtro-figuras-anime/saintseiya";
+  	  }
   
   });
 
