@@ -319,6 +319,52 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+//// personalizados dropdown
+document.addEventListener("DOMContentLoaded", function () {
+
+    const menuPersonalizados = [...document.querySelectorAll(".desktop-list__item")]
+        .find(item => {
+            const link = item.querySelector(".desktop-list__link");
+            return link && link.textContent.trim() === "PERSONALIZADOS";
+        });
+
+    if (!menuPersonalizados) return;
+
+    const link = menuPersonalizados.querySelector(".desktop-list__link");
+
+    // Agregar flecha igual a Información
+    link.insertAdjacentHTML(
+        "beforeend",
+        `
+        <span class="desktop-list__down-icon text--primary uk-icon" uk-icon="icon: chevron-down">
+            <svg width="20" height="20" viewBox="0 0 20 20">
+                <polyline fill="none" stroke="currentColor" stroke-width="1.03" points="16 7 10 13 4 7"></polyline>
+            </svg>
+        </span>
+        `
+    );
+
+    // Crear dropdown
+    const dropdown = document.createElement("ul");
+
+    dropdown.className =
+        "uk-nav-sub uk-nav-parent-icon uk-dropdown uk-dropdown-bottom-left";
+
+    dropdown.setAttribute("uk-dropdown", "");
+
+    dropdown.innerHTML = `
+        <li class="desktop-list__subitem nav-overlay text--primary">
+            <a href="https://www.purcua.com.ar/personalizados/tazas-y-jarros"
+               class="desktop-list-link__text desktop-list-link__text--bold">
+                TAZAS Y JARROS
+            </a>
+        </li>
+    `;
+
+    menuPersonalizados.appendChild(dropdown);
+});
+
+
 
 /////////////////////////////////////// MOBILE /////////////////////////////////
 
