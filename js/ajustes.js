@@ -281,18 +281,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// AGREGAR PERSONALIZADOS AL LADO DEL BOTON INICIO
+// AGREGAR PERSONALIZADOS AL LADO DEL BOTON PRODUCTOS
 document.addEventListener("DOMContentLoaded", function () {
 
     const menu = document.querySelector(".header-menu__desktop-list");
 
     if (!menu) return;
 
-    // buscar el item INICIO
+    // buscar el item PRODUCTOS
     const inicioItem = [...menu.querySelectorAll(".desktop-list__item")]
         .find(item => {
             const link = item.querySelector("a");
-            return link && link.textContent.trim() === "Inicio";
+            return link && link.textContent.trim() === "Productos";
         });
 
     if (!inicioItem) return;
@@ -322,47 +322,29 @@ document.addEventListener("DOMContentLoaded", function () {
 //// personalizados dropdown
 document.addEventListener("DOMContentLoaded", function () {
 
-    const menuPersonalizados = [...document.querySelectorAll(".desktop-list__item")]
+    const itemPersonalizados = [...document.querySelectorAll(".desktop-list__item")]
         .find(item => {
             const link = item.querySelector(".desktop-list__link");
             return link && link.textContent.trim() === "PERSONALIZADOS";
         });
 
-    if (!menuPersonalizados) return;
+    if (!itemPersonalizados) return;
 
-    const link = menuPersonalizados.querySelector(".desktop-list__link");
+    itemPersonalizados.innerHTML = `
+        <a class="desktop-list__link" href="#" aria-expanded="false">
+            PERSONALIZADOS
+            <span class="desktop-list__down-icon text--primary uk-icon" uk-icon="icon: chevron-down"></span>
+        </a>
 
-  if (!link.querySelector(".desktop-list__down-icon")) {
-    link.insertAdjacentHTML(
-        "beforeend",
-        `
-        <span class="desktop-list__down-icon text--primary uk-icon" uk-icon="icon: chevron-down">
-            <svg width="20" height="20" viewBox="0 0 20 20">
-                <polyline fill="none" stroke="currentColor" stroke-width="1.03" points="16 7 10 13 4 7"></polyline>
-            </svg>
-        </span>
-        `
-    );
-}
-
-    // Crear dropdown
-    const dropdown = document.createElement("ul");
-
-    dropdown.className =
-        "uk-nav-sub uk-nav-parent-icon uk-dropdown uk-dropdown-bottom-left";
-
-    dropdown.setAttribute("uk-dropdown", "");
-
-    dropdown.innerHTML = `
-        <li class="desktop-list__subitem nav-overlay text--primary">
-            <a href="https://www.purcua.com.ar/personalizados/tazas-y-jarros"
-               class="desktop-list-link__text desktop-list-link__text--bold">
-                TAZAS Y JARROS
-            </a>
-        </li>
+        <ul class="uk-nav-sub uk-nav-parent-icon uk-dropdown uk-dropdown-bottom-left" uk-dropdown>
+            <li class="desktop-list__subitem nav-overlay text--primary">
+                <a href="https://www.purcua.com.ar/personalizados/tazas-y-jarros"
+                   class="desktop-list-link__text desktop-list-link__text--bold">
+                    TAZAS Y TAZONES
+                </a>
+            </li>
+        </ul>
     `;
-
-    menuPersonalizados.appendChild(dropdown);
 });
 
 
