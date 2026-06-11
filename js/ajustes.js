@@ -320,32 +320,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //// personalizados dropdown
-document.addEventListener("DOMContentLoaded", function () {
 
-    const itemPersonalizados = [...document.querySelectorAll(".desktop-list__item")]
-        .find(item => {
-            const link = item.querySelector(".desktop-list__link");
-            return link && link.textContent.trim() === "PERSONALIZADOS";
-        });
-
-    if (!itemPersonalizados) return;
-
-    itemPersonalizados.innerHTML = `
-        <a class="desktop-list__link" href="#" aria-expanded="false">
-            PERSONALIZADOS
-            <span class="desktop-list__down-icon text--primary uk-icon" uk-icon="icon: chevron-down"></span>
-        </a>
-
-        <ul class="uk-nav-sub uk-nav-parent-icon uk-dropdown uk-dropdown-bottom-left" uk-dropdown>
-            <li class="desktop-list__subitem nav-overlay text--primary">
-                <a href="https://www.purcua.com.ar/personalizados/tazas-y-jarros"
-                   class="desktop-list-link__text desktop-list-link__text--bold">
-                    TAZAS Y TAZONES
-                </a>
-            </li>
-        </ul>
-    `;
-});
 
 
 
