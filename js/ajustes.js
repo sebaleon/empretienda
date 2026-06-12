@@ -511,3 +511,66 @@ document.addEventListener("DOMContentLoaded", function () {
     itemInicio.insertAdjacentHTML("afterend", nuevoBoton);
 
 });
+
+/// personalizados dropdown mobile
+document.addEventListener("DOMContentLoaded", function () {
+
+    const item = [...document.querySelectorAll(".mobile-menu-sidenav__list-item")]
+        .find(li => {
+            const link = li.querySelector(".mobile-menu-sidenav__item-link");
+            return link && link.textContent.trim() === "Personalizados";
+        });
+
+    if (!item) return;
+
+    item.classList.add("uk-parent");
+
+    item.innerHTML = `
+        <a href="#" class="mobile-menu-sidenav__item-link">
+            Personalizados
+        </a>
+
+        <ul class="uk-nav-sub uk-nav-parent-icon" hidden>
+            <li class="mobile-menu-sidenav__list-item">
+                <a href="https://www.purcua.com.ar/personalizados/tazas-y-jarros"
+                   class="mobile-menu-sidenav__item-link">
+                    TAZAS Y TAZONES
+                </a>
+            </li>
+
+			<li class="mobile-menu-sidenav__list-item">
+                <a href="https://www.purcua.com.ar/personalizados/textil"
+                   class="mobile-menu-sidenav__item-link">
+                    TEXTIL
+                </a>
+            </li>
+
+			<li class="mobile-menu-sidenav__list-item">
+                <a href="https://www.purcua.com.ar/personalizados/llaveros"
+                   class="mobile-menu-sidenav__item-link">
+                    LLAVEROS
+                </a>
+            </li>
+
+			<li class="mobile-menu-sidenav__list-item">
+                <a href="https://www.purcua.com.ar/personalizados/papeleria-para-cumple"
+                   class="mobile-menu-sidenav__item-link">
+                    PAPELERÍA PARA CUMPLE
+                </a>
+            </li>
+
+			<li class="mobile-menu-sidenav__list-item">
+                <a href="https://www.purcua.com.ar/personalizados/papeleria-para-emprendedores"
+                   class="mobile-menu-sidenav__item-link">
+                    PAPELERÍA PARA EMPRENDEDORES
+                </a>
+            </li>
+			
+        </ul>
+    `;
+
+    if (window.UIkit) {
+        UIkit.nav(item.closest("[uk-nav]"));
+    }
+
+});
