@@ -498,16 +498,16 @@ document.addEventListener("DOMContentLoaded", function () {
         </li>
     `;
 
-    // Buscar INICIO
+    // Buscar PRODUCTOS
     const inicio = [...menuMobile.querySelectorAll(".mobile-menu-sidenav__item-link")]
-        .find(link => link.textContent.trim() === "Inicio");
+        .find(link => link.textContent.trim() === "Productos");
 
     if (!inicio) return;
 
     // Obtener LI padre
     const itemInicio = inicio.closest("li");
 
-    // Insertar debajo de INICIO
+    // Insertar debajo de PRODUCTOS
     itemInicio.insertAdjacentHTML("afterend", nuevoBoton);
 
 });
