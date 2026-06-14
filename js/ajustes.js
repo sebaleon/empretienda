@@ -629,8 +629,13 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollbar-width:none;
 }
 
+.quick-links{
+    scrollbar-width:none; /* Firefox */
+    -ms-overflow-style:none; /* IE y Edge antiguos */
+}
+
 .quick-links::-webkit-scrollbar{
-    display:none;
+    display:none; /* Chrome, Edge, Safari */
 }
 
 .quick-link{
