@@ -578,10 +578,10 @@ document.addEventListener("DOMContentLoaded", function () {
 /// ACCESOS DIRECTOS
 document.addEventListener("DOMContentLoaded", function () {
 
-    const headerMenu = document.querySelector(".header-menu");
-    const carrusel = document.querySelector(".block-carrousel");
+    //const headerMenu = document.querySelector(".header-menu");
+    //const carrusel = document.querySelector(".block-carrousel");
 
-    if (!headerMenu || !carrusel) return;
+    //if (!headerMenu || !carrusel) return;
 
     const accesosRapidos = document.createElement("div");
     accesosRapidos.className = "quick-links";
