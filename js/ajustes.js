@@ -585,7 +585,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="quick-links-container">
             <div class="quick-links">
 
-        <a href="https://www.purcua.com.ar/figuras-y-coleccionables" class="quick-link">
+        <a href="https://www.purcua.com.ar/figuras-y-coleccionables/anime" class="quick-link">
             <img src="https://d22fxaf9t8d39k.cloudfront.net/360b1a8d8866a99e189671dfdba7cd3d9c4510485ae8fca047d4bb13e77cc65f31350.jpg" alt="Figuras">
             <span>Figuras</span>
         </a>
