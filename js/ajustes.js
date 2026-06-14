@@ -588,24 +588,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     accesosRapidos.innerHTML = `
 
-        <a href="/figuras-de-accion" class="quick-link">
+        <a href="https://www.purcua.com.ar/figuras-y-coleccionables" class="quick-link">
             <img src="https://d22fxaf9t8d39k.cloudfront.net/360b1a8d8866a99e189671dfdba7cd3d9c4510485ae8fca047d4bb13e77cc65f31350.jpg" alt="Figuras">
             <span>Figuras</span>
         </a>
 
-        <a href="/almohadones" class="quick-link">
-            <img src="https://d22fxaf9t8d39k.cloudfront.net/cc1b11e08fc7953fb45c8ded64a9fa83dfb0d0394b0b27ac3b4ed65a5adeb10031350.jpg" alt="Almohadones">
-            <span>Almohadones</span>
+        <a href="https://www.purcua.com.ar/accesorios" class="quick-link">
+            <img src="https://d22fxaf9t8d39k.cloudfront.net/15fdf60fb65fc34c1e6f3819df21e09e4693cec8438864c2b9105768e0edb52e31350.jpg" alt="Accesorios">
+            <span>Accesorios</span>
         </a>
 
-        <a href="/personalizados/tazas-y-jarros" class="quick-link">
+        <a href="https://www.purcua.com.ar/personalizados/tazas-y-jarros" class="quick-link">
             <img src="https://d22fxaf9t8d39k.cloudfront.net/24cd8f7043c20dd856747ab3322d484d10e4a7eadd995bcff6776c9057aac3a031350.jpg" alt="Tazas">
             <span>Tu taza <br> personalizada</span>
         </a>
 
-        <a href="/figuras-de-accion" class="quick-link">
-            <img src="https://d22fxaf9t8d39k.cloudfront.net/360b1a8d8866a99e189671dfdba7cd3d9c4510485ae8fca047d4bb13e77cc65f31350.jpg" alt="Figuras">
-            <span>Figuras</span>
+        <a href="https://www.purcua.com.ar/mangas-comics-libros" class="quick-link">
+            <img src="https://d22fxaf9t8d39k.cloudfront.net/de526f0b685ae1d8ccbbb67fe068f01816045b279510e5d3d43e941bb490a2f431350.jpg" alt="Mangas">
+            <span>Mangas</span>
         </a>
     `;
 
