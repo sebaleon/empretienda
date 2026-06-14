@@ -593,6 +593,11 @@ document.addEventListener("DOMContentLoaded", function () {
             <span>Figuras</span>
         </a>
 
+		<a href="https://www.purcua.com.ar/mangas-comics-libros" class="quick-link">
+            <img src="https://d22fxaf9t8d39k.cloudfront.net/de526f0b685ae1d8ccbbb67fe068f01816045b279510e5d3d43e941bb490a2f431350.jpg" alt="Mangas">
+            <span>Mangas</span>
+        </a>
+
         <a href="https://www.purcua.com.ar/accesorios" class="quick-link">
             <img src="https://d22fxaf9t8d39k.cloudfront.net/15fdf60fb65fc34c1e6f3819df21e09e4693cec8438864c2b9105768e0edb52e31350.jpg" alt="Accesorios">
             <span>Accesorios</span>
@@ -603,10 +608,11 @@ document.addEventListener("DOMContentLoaded", function () {
             <span>Tu taza <br> personalizada</span>
         </a>
 
-        <a href="https://www.purcua.com.ar/mangas-comics-libros" class="quick-link">
-            <img src="https://d22fxaf9t8d39k.cloudfront.net/de526f0b685ae1d8ccbbb67fe068f01816045b279510e5d3d43e941bb490a2f431350.jpg" alt="Mangas">
-            <span>Mangas</span>
+        <a href="https://www.purcua.com.ar/peluches" class="quick-link">
+            <img src="https://d22fxaf9t8d39k.cloudfront.net/e9638e97c51130fc596fb077620fedfd9bfe6c7bfdf0e79843431244aec9365031350.jpg" alt="Peluches">
+            <span>Peluches</span>
         </a>
+
     `;
 
     carrusel.parentNode.insertBefore(accesosRapidos, carrusel);
