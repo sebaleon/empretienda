@@ -578,10 +578,10 @@ document.addEventListener("DOMContentLoaded", function () {
 /// ACCESOS DIRECTOS
 document.addEventListener("DOMContentLoaded", function () {
 
-    //const headerMenu = document.querySelector(".header-menu");
-    //const carrusel = document.querySelector(".block-carrousel");
+    const headerMenu = document.querySelector(".header-menu");
+    const carrusel = document.querySelector(".block-carrousel");
 
-    //if (!headerMenu || !carrusel) return;
+    if (!headerMenu || !carrusel) return;
 
     const accesosRapidos = document.createElement("div");
     accesosRapidos.className = "quick-links";
@@ -732,20 +732,6 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
 
     document.head.appendChild(style);
-
-	// Desktop
-    const desktopNav = document.querySelector(".header-menu__desktop");
-
-    if (desktopNav) {
-        desktopNav.insertAdjacentElement("afterend", quickLinks.cloneNode(true));
-    }
-
-    // Mobile
-    const mobileNav = document.querySelector(".header-menu__mobile");
-
-    if (mobileNav) {
-        mobileNav.insertAdjacentElement("afterend", quickLinks.cloneNode(true));
-    }
 
 });
 
