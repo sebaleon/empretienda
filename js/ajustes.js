@@ -733,6 +733,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.head.appendChild(style);
 
+	// Desktop
+    const desktopNav = document.querySelector(".header-menu__desktop");
+
+    if (desktopNav) {
+        desktopNav.insertAdjacentElement("afterend", quickLinks.cloneNode(true));
+    }
+
+    // Mobile
+    const mobileNav = document.querySelector(".header-menu__mobile");
+
+    if (mobileNav) {
+        mobileNav.insertAdjacentElement("afterend", quickLinks.cloneNode(true));
+    }
+
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -750,21 +764,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	        behavior: 'smooth'
 	    });
 	});
-
-
-	// Desktop
-    const desktopNav = document.querySelector(".header-menu__desktop");
-
-    if (desktopNav) {
-        desktopNav.insertAdjacentElement("afterend", quickLinks.cloneNode(true));
-    }
-
-    // Mobile
-    const mobileNav = document.querySelector(".header-menu__mobile");
-
-    if (mobileNav) {
-        mobileNav.insertAdjacentElement("afterend", quickLinks.cloneNode(true));
-    }
 	
 });
 
