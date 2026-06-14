@@ -578,15 +578,12 @@ document.addEventListener("DOMContentLoaded", function () {
 /// ACCESOS DIRECTOS
 document.addEventListener("DOMContentLoaded", function () {
 
-    const headerMenu = document.querySelector(".header-menu");
-    const carrusel = document.querySelector(".block-carrousel");
+    // Evitar duplicados
+    if (document.querySelector(".quick-links-container")) return;
 
-    if (!headerMenu || !carrusel) return;
-
-    const accesosRapidos = document.createElement("div");
-    accesosRapidos.className = "quick-links";
-
-    accesosRapidos.innerHTML = `
+    const quickLinksHTML = `
+        <div class="quick-links-container">
+            <div class="quick-links">
 
         <a href="https://www.purcua.com.ar/figuras-y-coleccionables" class="quick-link">
             <img src="https://d22fxaf9t8d39k.cloudfront.net/360b1a8d8866a99e189671dfdba7cd3d9c4510485ae8fca047d4bb13e77cc65f31350.jpg" alt="Figuras">
@@ -613,144 +610,138 @@ document.addEventListener("DOMContentLoaded", function () {
             <span>Peluches</span>
         </a>
 
+            </div>
+        </div>
     `;
 
-    carrusel.parentNode.insertBefore(accesosRapidos, carrusel);
+    // Insertar debajo del menú principal
+    const headerMenu = document.querySelector(".header-menu");
 
+    if (headerMenu) {
+        headerMenu.insertAdjacentHTML("afterend", quickLinksHTML);
+    }
+
+    // CSS
     const style = document.createElement("style");
+
     style.innerHTML = `
-.quick-links{
-    display:flex;
-    align-items:flex-start;
-    gap:20px;
-    padding:15px 10px;
 
-    /* Carrusel horizontal */
-    overflow-x:auto;
-    overflow-y:hidden;
+        .quick-links-container{
+            width:100%;
+            background:#fff;
+            padding:15px 0;
+            border-bottom:1px solid rgba(0,0,0,.08);
+        }
 
-    scroll-behavior:smooth;
-    -webkit-overflow-scrolling:touch;
+        .quick-links{
+            display:flex;
+            gap:18px;
 
-    scrollbar-width:none;
-}
+            overflow-x:auto;
+            overflow-y:hidden;
 
-.quick-links{
-    scrollbar-width:none; /* Firefox */
-    -ms-overflow-style:none; /* IE y Edge antiguos */
-}
+            scroll-behavior:smooth;
+            -webkit-overflow-scrolling:touch;
 
-.quick-links::-webkit-scrollbar{
-    display:none; /* Chrome, Edge, Safari */
-}
+            padding:0 15px;
 
-.quick-link{
-    display:flex !important;
-    flex-direction:column !important;
-    align-items:center !important;
-    justify-content:flex-start !important;
+            scrollbar-width:none;
+            -ms-overflow-style:none;
+        }
 
-    text-decoration:none;
-    color:#333;
-    text-align:center;
+        .quick-links::-webkit-scrollbar{
+            display:none;
+        }
 
-    flex:0 0 auto;
-    min-width:90px;
-}
+        .quick-link{
+            flex:0 0 auto;
 
-.quick-link img{
-    width:70px;
-    height:70px;
+            display:flex !important;
+            flex-direction:column !important;
+            align-items:center !important;
 
-    border-radius:50%;
-    object-fit:cover;
+            text-decoration:none;
+            text-align:center;
 
-    border:3px solid #eee;
+            min-width:90px;
+        }
 
-    transition:all .3s ease;
-    display:block;
-}
+        .quick-link img{
+            width:70px;
+            height:70px;
 
-.quick-link:hover img{
-    transform:scale(1.08);
-}
+            border-radius:50%;
+            object-fit:cover;
 
-.quick-link span{
-    display:block;
-    margin-top:8px;
+            border:3px solid #ececec;
 
-    font-size:13px;
-    font-weight:600;
-    line-height:1.2;
-}
+            transition:transform .3s ease;
+            display:block;
+        }
 
-/* TABLET */
-@media (min-width:768px){
+        .quick-link:hover img{
+            transform:scale(1.06);
+        }
 
-    .quick-links{
-        gap:30px;
-        padding:20px 15px;
-    }
+        .quick-link span{
+            margin-top:8px;
 
-    .quick-link{
-        min-width:120px;
-    }
+            font-size:13px;
+            font-weight:600;
+            line-height:1.2;
 
-    .quick-link img{
-        width:100px;
-        height:100px;
-    }
+            color:#333;
+        }
 
-    .quick-link span{
-        font-size:14px;
-        margin-top:10px;
-    }
-}
+        /* Tablet */
+        @media (min-width:768px){
 
-/* DESKTOP */
-@media (min-width:1024px){
+            .quick-links{
+                gap:25px;
+                padding:0 20px;
+            }
 
-    .quick-links{
-        justify-content:center;
-        overflow-x:visible;
-    }
+            .quick-link{
+                min-width:110px;
+            }
 
-    .quick-link{
-        min-width:140px;
-    }
+            .quick-link img{
+                width:95px;
+                height:95px;
+            }
 
-    .quick-link img{
-        width:120px;
-        height:120px;
-    }
+            .quick-link span{
+                font-size:14px;
+            }
+        }
 
-    .quick-link span{
-        font-size:15px;
-        margin-top:12px;
-    }
-}
+        /* Desktop */
+        @media (min-width:1024px){
+
+            .quick-links{
+                justify-content:center;
+                overflow-x:visible;
+            }
+
+            .quick-link{
+                min-width:140px;
+            }
+
+            .quick-link img{
+                width:120px;
+                height:120px;
+            }
+
+            .quick-link span{
+                font-size:15px;
+                margin-top:12px;
+            }
+        }
+
     `;
 
     document.head.appendChild(style);
 
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-	const container = document.querySelector('.quick-links');
-	
-	document.querySelector('.btn-next').addEventListener('click', () => {
-	    container.scrollBy({
-	        left: 250,
-	        behavior: 'smooth'
-	    });
-	});
-	document.querySelector('.btn-prev').addEventListener('click', () => {
-	    container.scrollBy({
-	        left: -250,
-	        behavior: 'smooth'
-	    });
-	});
-	
 });
 
 
