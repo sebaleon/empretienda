@@ -574,3 +574,169 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+
+/// ACCESOS DIRECTOS
+document.addEventListener("DOMContentLoaded", function () {
+
+    const headerMenu = document.querySelector(".header-menu");
+    const carrusel = document.querySelector(".block-carrousel");
+
+    if (!headerMenu || !carrusel) return;
+
+    const accesosRapidos = document.createElement("div");
+    accesosRapidos.className = "quick-links";
+
+    accesosRapidos.innerHTML = `
+
+        <a href="/figuras-de-accion" class="quick-link">
+            <img src="https://d22fxaf9t8d39k.cloudfront.net/360b1a8d8866a99e189671dfdba7cd3d9c4510485ae8fca047d4bb13e77cc65f31350.jpg" alt="Figuras">
+            <span>Figuras</span>
+        </a>
+
+        <a href="/almohadones" class="quick-link">
+            <img src="https://d22fxaf9t8d39k.cloudfront.net/cc1b11e08fc7953fb45c8ded64a9fa83dfb0d0394b0b27ac3b4ed65a5adeb10031350.jpg" alt="Almohadones">
+            <span>Almohadones</span>
+        </a>
+
+        <a href="/personalizados/tazas-y-jarros" class="quick-link">
+            <img src="https://d22fxaf9t8d39k.cloudfront.net/24cd8f7043c20dd856747ab3322d484d10e4a7eadd995bcff6776c9057aac3a031350.jpg" alt="Tazas">
+            <span>Tu taza <br> personalizada</span>
+        </a>
+
+        <a href="/figuras-de-accion" class="quick-link">
+            <img src="https://d22fxaf9t8d39k.cloudfront.net/360b1a8d8866a99e189671dfdba7cd3d9c4510485ae8fca047d4bb13e77cc65f31350.jpg" alt="Figuras">
+            <span>Figuras</span>
+        </a>
+    `;
+
+    carrusel.parentNode.insertBefore(accesosRapidos, carrusel);
+
+    const style = document.createElement("style");
+    style.innerHTML = `
+.quick-links{
+    display:flex;
+    align-items:flex-start;
+    gap:20px;
+    padding:15px 10px;
+
+    /* Carrusel horizontal */
+    overflow-x:auto;
+    overflow-y:hidden;
+
+    scroll-behavior:smooth;
+    -webkit-overflow-scrolling:touch;
+
+    scrollbar-width:none;
+}
+
+.quick-links::-webkit-scrollbar{
+    display:none;
+}
+
+.quick-link{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+
+    text-decoration:none;
+    color:#333;
+    text-align:center;
+
+    flex:0 0 auto;
+    min-width:90px;
+}
+
+.quick-link img{
+    width:70px;
+    height:70px;
+
+    border-radius:50%;
+    object-fit:cover;
+
+    border:3px solid #eee;
+
+    transition:all .3s ease;
+    display:block;
+}
+
+.quick-link:hover img{
+    transform:scale(1.08);
+}
+
+.quick-link span{
+    display:block;
+    margin-top:8px;
+
+    font-size:13px;
+    font-weight:600;
+    line-height:1.2;
+}
+
+/* TABLET */
+@media (min-width:768px){
+
+    .quick-links{
+        gap:30px;
+        padding:20px 15px;
+    }
+
+    .quick-link{
+        min-width:120px;
+    }
+
+    .quick-link img{
+        width:100px;
+        height:100px;
+    }
+
+    .quick-link span{
+        font-size:14px;
+        margin-top:10px;
+    }
+}
+
+/* DESKTOP */
+@media (min-width:1024px){
+
+    .quick-links{
+        justify-content:center;
+        overflow-x:visible;
+    }
+
+    .quick-link{
+        min-width:140px;
+    }
+
+    .quick-link img{
+        width:120px;
+        height:120px;
+    }
+
+    .quick-link span{
+        font-size:15px;
+        margin-top:12px;
+    }
+}
+    `;
+
+    document.head.appendChild(style);
+
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+	const container = document.querySelector('.quick-links');
+	
+	document.querySelector('.btn-next').addEventListener('click', () => {
+	    container.scrollBy({
+	        left: 250,
+	        behavior: 'smooth'
+	    });
+	});
+	document.querySelector('.btn-prev').addEventListener('click', () => {
+	    container.scrollBy({
+	        left: -250,
+	        behavior: 'smooth'
+	    });
+	});
+});
