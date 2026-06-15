@@ -586,12 +586,12 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="quick-links">
 
         <a href="https://www.purcua.com.ar/figuras-y-coleccionables/anime" class="quick-link">
-            <img src="https://d22fxaf9t8d39k.cloudfront.net/360b1a8d8866a99e189671dfdba7cd3d9c4510485ae8fca047d4bb13e77cc65f31350.jpg" alt="Figuras">
+            <img src="https://sakuramanga.fr/cdn/shop/files/figurine-son-goku-nappa_1.png" alt="Figuras">
             <span>Figuras</span>
         </a>
 
 		<a href="https://www.purcua.com.ar/mangas-comics-libros" class="quick-link">
-            <img src="https://img.rtve.es/imagenes/persona-leyendo-stand-mangas-one-piece-naruto/1635873046169.jpg" alt="Mangas">
+            <img src="https://cdn-blog.superprof.com/blog_es/wp-content/uploads/2019/10/leer-comic-japones.jpg" alt="Mangas">
             <span>Mangas</span>
         </a>
 
