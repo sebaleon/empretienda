@@ -596,7 +596,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </a>
 
         <a href="https://www.purcua.com.ar/accesorios" class="quick-link">
-            <img src="https://d22fxaf9t8d39k.cloudfront.net/15fdf60fb65fc34c1e6f3819df21e09e4693cec8438864c2b9105768e0edb52e31350.jpg" alt="Accesorios">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_797100-MLM72440752620_102023-O-llavero-star-wars-halcn-milenario.webp" alt="Accesorios">
             <span>Accesorios</span>
         </a>
 
@@ -606,7 +606,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </a>
 
         <a href="https://www.purcua.com.ar/peluches" class="quick-link">
-            <img src="https://d22fxaf9t8d39k.cloudfront.net/e9638e97c51130fc596fb077620fedfd9bfe6c7bfdf0e79843431244aec9365031350.jpg" alt="Peluches">
+            <img src="https://acdn-us.mitiendanube.com/stores/001/880/465/products/peluche-kirby-25-cm1-2f9e997838cca6814c16752798806818-480-0.webp" alt="Peluches">
             <span>Peluches</span>
         </a>
 
