@@ -606,7 +606,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </a>
 
         <a href="https://www.purcua.com.ar/peluches" class="quick-link">
-            <img src="https://acdn-us.mitiendanube.com/stores/001/880/465/products/peluche-kirby-25-cm1-2f9e997838cca6814c16752798806818-480-0.webp" alt="Peluches">
+            <img src="https://i.ebayimg.com/images/g/d80AAOSw71VoVBrP/s-l1600.webp" alt="Peluches">
             <span>Peluches</span>
         </a>
 
