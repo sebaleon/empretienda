@@ -591,7 +591,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </a>
 
 		<a href="https://www.purcua.com.ar/mangas-comics-libros" class="quick-link">
-            <img src="https://d22fxaf9t8d39k.cloudfront.net/de526f0b685ae1d8ccbbb67fe068f01816045b279510e5d3d43e941bb490a2f431350.jpg" alt="Mangas">
+            <img src="https://img.rtve.es/imagenes/persona-leyendo-stand-mangas-one-piece-naruto/1635873046169.jpg" alt="Mangas">
             <span>Mangas</span>
         </a>
 
