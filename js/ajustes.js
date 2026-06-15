@@ -596,7 +596,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </a>
 
         <a href="https://www.purcua.com.ar/accesorios" class="quick-link">
-            <img src="https://s.alicdn.com/@sc04/kf/H3cc3dd88e6fa413eaf6c9c2f3022eda9I.jpg" alt="Accesorios">
+            <img src="https://d22fxaf9t8d39k.cloudfront.net/60cb9fcb74d09025c320c6eaed7d2e6a65897ffea7a694a0127bb9ddc9093dd831350.png" alt="Accesorios">
             <span>Accesorios</span>
         </a>
 
