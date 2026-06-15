@@ -596,7 +596,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </a>
 
         <a href="https://www.purcua.com.ar/accesorios" class="quick-link">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_797100-MLM72440752620_102023-O-llavero-star-wars-halcn-milenario.webp" alt="Accesorios">
+            <img src="https://s.alicdn.com/@sc04/kf/H3cc3dd88e6fa413eaf6c9c2f3022eda9I.jpg" alt="Accesorios">
             <span>Accesorios</span>
         </a>
 
