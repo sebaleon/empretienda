@@ -743,20 +743,3 @@ document.addEventListener("DOMContentLoaded", function () {
     document.head.appendChild(style);
 
 });
-
-
-/// destacar aviso importante pago transferencia
-document.addEventListener("DOMContentLoaded", function () {
-	const interval = setInterval(() => {
-	    const label = document.querySelector('label[for="payment_option_radio-5"]');
-	
-	    if (label) {
-	        label.style.color = "red";
-	        label.style.fontWeight = "bold";
-	        label.style.fontSize = "1.75rem"; // tamaño similar a h3
-	        label.style.display = "block";
-	        clearInterval(interval);
-	    }
-	}, 500);
-});
-
